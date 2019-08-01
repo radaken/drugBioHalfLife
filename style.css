@@ -33,3 +33,15 @@ a{
     color: #fff;
     text-decoration: none;
 }
+#easter{
+    opacity: 0.3;
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    max-width: 100px;
+    margin: 0 auto;
+    visibility: hidden !important; 
+}
+#easter:hover{
+    opacity: 1;
+}

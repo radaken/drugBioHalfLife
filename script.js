@@ -8,6 +8,7 @@ var result = document.getElementById('result');
 //var resultDate = document.getElementById('resultDate').innerHTML;
 
 var submitButton = document.getElementById('submitButton');
+var easter = document.getElementById('easter');
 
 var metricPrefixLower = Math.pow(10,3);
 var metricPrefixHigher = Math.pow(10,-3);
@@ -153,4 +154,9 @@ function count() {
     
 }
 
+/*function easteregg(){
+    if (sub)
+}*/
+
 submitButton.addEventListener("click", count);
+//easter.addEventListener("click", easteregg);
