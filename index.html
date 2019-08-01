@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <title>Период полувыведения веществ</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+        <div class="question">
+            <p class="header">Выберите вещество:</p>
+            <input list="substanceList" id="substance" placeholder="MDMA">
+            <datalist id="substanceList">
+                <option value="MDMA">
+                <option value="Марихуана">
+                <option value="Гашиш">
+                <option value="Амфетамин">
+                <option value="Мефедрон">
+            </datalist>
+        </div>
+        
+        <div class="question">
+        <p class="header">Введите кол-во вещества:</p>
+        <input type="number" id="quantity" placeholder="200"><p class="metric" id="metricPrefix"></p>
+        </div>
+        
+        <div class="question">
+            <p class="header">Какой метаболизм?</p>
+            <input list="metabolismList" id="metabolism">
+            <datalist id="metabolismList">
+                <option value="Стариковский">
+                <option value="Средний">
+                <option value="Молодой">
+            </datalist>
+        </div>
+
+        <div class="resultBlock">
+        <button id="submitButton">Рассчитать</button>
+        <p id="result" style="font-weight: bold"></p>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
