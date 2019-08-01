@@ -4,7 +4,7 @@
 
 
 var metricPrefix = document.getElementById('metricPrefix').innerHTML;
-var result = document.getElementById('result').innerHTML;
+var result = document.getElementById('result');
 //var resultDate = document.getElementById('resultDate').innerHTML;
 
 var submitButton = document.getElementById('submitButton');
@@ -25,6 +25,9 @@ function count() {
     switch (substance) {
         case 'MDMA':
             halfLife = 7.5;
+            if (metabolism === 'Молодой') halfLife = 6;
+            if (metabolism === 'Средний') halfLife = 7.5;
+            if (metabolism === 'Стариковский') halfLife = 8;
             expressTestTriggerZone = 500;
             break;
             
@@ -77,7 +80,7 @@ function count() {
 - экстази(мдма) - 500 нг/мл.
     */
     
-    console.log('Чтобы экспресс-тест не реагировал нужно ждать ' + hoursLeft + ' часов после употребления');
+    result.innerHTML = ' Чтобы экспресс-тест не реагировал нужно ждать ' + hoursLeft + ' часов после употребления (' + hoursLeft / 24 + ' дней)';
     
 }
 
