@@ -1,6 +1,6 @@
 html{
     height: 100%;
-    width: 100%;
+    width: auto;
     color: white;
     font-family: Open sans, sans-serif;
 }
@@ -8,8 +8,13 @@ html{
 body{
     margin: 0 auto;
     height: 100%;
+    width: inherit;
     background-color: #0d0e0e;
     width: 80%
+}
+
+@media (max-width: 500px) {
+    width: 30%;
 }
 
 #wrapper{

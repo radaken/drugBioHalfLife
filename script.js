@@ -24,7 +24,7 @@ function count() {
     var expressTestTriggerZone = 0; //nanograms
     var expressTestResult = true;  
     switch (substance) {
-        case 'MDMA':
+        case 'mdma':
             halfLife = 7.5;
             if (metabolism === 'Молодой') halfLife = 6;
             if (metabolism === 'Средний') halfLife = 7.5;
@@ -32,92 +32,92 @@ function count() {
             expressTestTriggerZone = 500;
             break;
             
-        case 'Амфетамин':
+        case 'speed':
             halfLife = 19;
             if (metabolism === 'Молодой') halfLife = 8;
             if (metabolism === 'Стариковский') halfLife = 30;
             expressTestTriggerZone = 1000;
             break;
             
-         case 'Мефедрон':        
+         case '4mmc':        
             halfLife = 0.4;
             expressTestTriggerZone = 300;
             break;
             
 //!!!!!!!!! Обратить внимание на среднее содержание КБД (t1/2 = 9ч) и ТГК (t1/2 = 2-3ч) в mj и гашише
             
-         case 'Гашиш':        
+         case 'hashish':        
             halfLife = 10;
             expressTestTriggerZone = 50;
             break;
             
-        case 'Героин':        
+        case 'heroine':        
             halfLife = 0.5;
             expressTestTriggerZone = 300;
             break;
             
-        case 'Морфин':        
+        case 'morphine':        
             halfLife = 6;
             expressTestTriggerZone = 300;
             break;
     
-        case 'Кокаин':        
+        case 'cocaine':        
             halfLife = 1.1;
             if (metabolism === 'Молодой') halfLife = 0.7;
             if (metabolism === 'Стариковский') halfLife = 1.5;
             expressTestTriggerZone = 300;
             break;
             
-        case 'Барбитураты' :        
+        case 'barbi' :        
             halfLife = 82;
             if (metabolism === 'Молодой') halfLife = 24;
             if (metabolism === 'Стариковский') halfLife = 140;
             expressTestTriggerZone = 500;
             break;
             
-        case 'Метамфетамин':        
+        case 'methamph':        
             halfLife = 17.5;
             if (metabolism === 'Молодой') halfLife = 5;
             if (metabolism === 'Стариковский') halfLife = 30;
             expressTestTriggerZone = 300;
             break;
         
-        case 'Xanax (бензодиазепин)':        
+        case 'xanax':        
             halfLife = 11;
             if (metabolism === 'Молодой') halfLife = 6;
             if (metabolism === 'Стариковский') halfLife = 27;
             expressTestTriggerZone = 300;
             break;
             
-        case 'ЛСД':        
+        case 'lsd':        
             halfLife = 4;
             if (metabolism === 'Молодой') halfLife = 3;
             if (metabolism === 'Стариковский') halfLife = 5;
             expressTestTriggerZone = 300;
             break;
             
-        case 'Лирика (прегабалин)':        
+        case 'lyrica':        
             halfLife = 5.75;
             if (metabolism === 'Молодой') halfLife = 5;
             if (metabolism === 'Стариковский') halfLife = 6.5;
             expressTestTriggerZone = 300;
             break;
             
-        case 'GHB (оксибутират, масла)':        
+        case 'ghb':        
             halfLife = 0.75;
             if (metabolism === 'Молодой') halfLife = 0.5;
             if (metabolism === 'Стариковский') halfLife = 1;
             expressTestTriggerZone = 300;
             break;
             
-        case 'Габапентин (Конвалис, Катэна)':        
+        case 'gaba':        
             halfLife = 6;
             if (metabolism === 'Молодой') halfLife = 5;
             if (metabolism === 'Стариковский') halfLife = 7;
             expressTestTriggerZone = 300;
             break;
             
-        case 'Фенциклидин (PCP, ангельская пыль)':        
+        case 'pcp':        
             halfLife = 11;
             if (metabolism === 'Молодой') halfLife = 7;
             if (metabolism === 'Стариковский') halfLife = 48;
@@ -125,7 +125,7 @@ function count() {
             break;
             
         default: 
-            alert("Выберите вещество!");
+            return alert("Выберите вещество!");
             break;
     }
     
