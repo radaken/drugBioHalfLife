@@ -3,38 +3,49 @@
     <head>
         <title>Период полувыведения веществ</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="./style.css" type="text/css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|Roboto+Condensed" rel="stylesheet">
     </head>
     <body>
-        <div class="question">
-            <p class="header">Выберите вещество:</p>
-            <input list="substanceList" id="substance" placeholder="MDMA">
-            <datalist id="substanceList">
-                <option value="MDMA">
-                <option value="Марихуана" disabled>
-                <option value="Гашиш">
-                <option value="Амфетамин">
-                <option value="Мефедрон" disabled>
-            </datalist>
-        </div>
-        
-        <div class="question">
-        <p class="header">Введите кол-во вещества:</p>
-        <input type="number" id="quantity" placeholder="200"><span class="metric" id="metricPrefix">мг</span>
-        </div>
-        
-        <div class="question">
-            <p class="header">Какой метаболизм?</p>
-            <input list="metabolismList" id="metabolism">
-            <datalist id="metabolismList">
-                <option value="Стариковский">
-                <option value="Средний">
-                <option value="Молодой">
-            </datalist>
-        </div>
+        <div id="wrapper">
+            <div class="question">
+                <p class="header">Выберите вещество:</p>
+                <select id="substance" required >
+                    <option value="MDMA">MDMA</option>
+                    <option value="Мефедрон">Мефедрон</option>
+                    <option value="Марихуана">Марихуана</option>
+                    <option value="Гашиш">Гашиш</option>
+                    <option value="Амфетамин">Амфетамин</option>
+                    <option value="Морфин">Морфин</option>
+                    <option value="Героин">Героин</option>
+                    <option value="Барбитураты">Кокаин</option>
+                    <option value="Метамфетамин">Метамфетамин</option>
+                    <option value="Xanax (бензодиазепин)">Xanax (бензодиазепин)</option>
+                    <option value="Лирика (прегабалин)">Лирика (прегабалин)</option>Фенциклидин (PCP, SERNYL, \"ангельская пыль\")
+                    <option value="Фенциклидин (PCP, ангельская пыль)">Лирика (прегабалин)</option>
+                    <option value="GHB (оксибутират, масла)">GHB (оксибутират, масла)</option>
+                    <option value="Габапентин (Конвалис, Катэна)">Габапентин (Конвалис, Катэна)</option>
+                </select>
+            </div>
 
-        <div class="resultBlock">
-        <button id="submitButton">Рассчитать</button>
-        <p id="result" style="font-weight: bold"></p>
+            <div class="question">
+            <p class="header">Введите кол-во вещества:</p>
+            <input type="number" id="quantity" placeholder="200"><span class="metric" id="metricPrefix">мг</span>
+            </div>
+
+            <div class="question">
+                <p class="header">Какой метаболизм?</p>
+                <select id="metabolism">
+                    <option value="Стариковский">Стариковский</option>
+                    <option value="Средний">Средний</option>
+                    <option value="Молодой">Молодой</option>
+                </select>
+            </div>
+
+            <div class="resultBlock">
+                <input type="button" id="submitButton" value="Рассчитать">
+                <p id="result" style="font-weight: bold"></p>
+            </div>
         </div>
         <script src="./script.js"></script>
     </body>
