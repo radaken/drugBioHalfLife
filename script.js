@@ -1,8 +1,4 @@
 "use sctrict";
-
-
-
-
 var metricPrefix = document.getElementById('metricPrefix').innerHTML;
 var result = document.getElementById('result');
 //var resultDate = document.getElementById('resultDate').innerHTML;
@@ -10,19 +6,19 @@ var result = document.getElementById('result');
 var submitButton = document.getElementById('submitButton');
 var easter = document.getElementById('easter');
 
-var metricPrefixLower = Math.pow(10,3);
-var metricPrefixHigher = Math.pow(10,-3);
+var metricPrefixLower = Math.pow(10, 3);
+var metricPrefixHigher = Math.pow(10, -3);
 
 function count() {
-    var substance = document.getElementById('substance')[0].value;
+    var substance = document.getElementById('substance').value;
     var quantity = document.getElementById('quantity').value;
-    var metabolism = document.getElementById('metabolism')[0].value;    
+    var metabolism = document.getElementById('metabolism').value;
     var halfLife = 0; //hours
     var percentage = 1;
     var concentrationInPee = quantity * metricPrefixLower;
     var hoursLeft = 0;
     var expressTestTriggerZone = 0; //nanograms
-    var expressTestResult = true;  
+    var expressTestResult = true;
     switch (substance) {
         case 'mdma':
             halfLife = 7.5;
